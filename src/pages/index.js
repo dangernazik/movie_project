@@ -1,0 +1,7 @@
+export * from './HomePage'
+export * from './AboutPage'
+export * from './GenrePage'
+export * from './PopularMoviePAge'
+export * from './MovieDetailsPage'
+export * from './MovieGenrePage'
+export * from './SearchedMoviePage'

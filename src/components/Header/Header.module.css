@@ -1,0 +1,171 @@
+body{
+    background: var(--background-color);
+    transition: background-color 200ms linear;
+}
+.header_wrap{
+    /*position: fixed;*/
+    background: var(--background-color);
+    transition: background-color 200ms linear;
+    width: 100vw;
+}
+
+.Header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    min-height: 50px;
+    font-size: 20px;
+}
+.Header a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 200ms linear;
+}
+
+.Header a[class='active']{
+    color: var(--focus-color);
+}
+
+.Search{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Search input {
+    height: 30px;
+    border-radius: 10px;
+    color: var(--text-color);
+    margin-right: 5px;
+}
+.Search input:focus {
+    outline: none !important;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 5px var(--focus-color);
+}
+
+.Categories {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 650px;
+}
+.Categories a:hover {
+    color: var(--focus-color);
+    transition: color 200ms linear;
+}
+
+.Bar_logo {
+    display: flex;
+    justify-content: space-around;
+}
+.Bar_logo div{
+    margin-right: 70px;
+    color: var(--text-color);
+    transition: color 200ms linear;
+}
+
+.Bar_logo a{
+    font-weight: 700;
+}
+.user_theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user img{
+    height: 40px;
+    width: 40px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.login p {
+    margin-left: 15px;
+    font-size: 18px;
+    color: var(--text-color);
+    transition: color 200ms linear;
+}
+.user_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_div button{
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    border: none;
+    background: none;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+.button_div button:hover{
+    background: var(--background-icon-color);
+    border-radius: 10px;
+}
+html[data-theme='dark'] .button_div button{
+    color: white;
+
+}
+html[data-theme='dark'] .button_div button:hover{
+    background: rgba(248,255,255,0.67);
+    border-radius: 10px;
+
+}
+html[data-theme='dark'] .Search input{
+    background: var(--background-color);
+    border: var(--text-color) 1px solid;
+}
+html[data-theme='dark'] .Search input:focus {
+    outline: none !important;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 5px var(--focus-color);
+}
+.genres{
+
+    font-size: 20px;
+
+}
+.genres .genre_div{
+    display: flex;
+    margin-left: 50px;
+    flex-wrap: wrap;
+    margin-top: 200px;
+
+}
+.genre_div a{
+    color: var(--text-color);
+    text-decoration: none;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.genre_div a:hover{
+    color: var(--focus-color);
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+    margin-right: 20px;
+    transition: color 200ms linear;
+
+}
+.submit button{
+    color: var(--text-color);
+    border-radius: 5px;
+    padding: 0;
+    border: var(--text-color) 1px solid;
+    background: var(--background-color);
+    transition: color 200ms linear;
+}
+.submit button:hover{
+    cursor: pointer;
+}

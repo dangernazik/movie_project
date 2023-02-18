@@ -1,0 +1,47 @@
+.Card{
+    height: 500px;
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    Overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.image {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+}
+.Card img{
+    height: 100%;
+    width: 100%;
+}
+
+.Card:hover {
+    outline: none !important;
+    box-shadow:  var(--text-color) 0px 1px 8px;;
+}
+.Card:hover h2{
+    color: var(--focus-color)
+}
+.Card:hover img{
+    opacity: 0.6;
+}
+.title{
+    color: var(--text-color);
+    margin-left: 10px;
+    height: 60px;
+    transition: color 200ms linear;
+}
+.collage{
+    height: 400px;
+    overflow: hidden;
+}
+.stars{
+    margin-left: 10px;
+    margin-top: 10px;
+}
