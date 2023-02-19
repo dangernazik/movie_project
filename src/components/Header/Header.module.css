@@ -136,6 +136,7 @@ html[data-theme='dark'] .Search input:focus {
     margin-left: 50px;
     flex-wrap: wrap;
     margin-top: 200px;
+    row-gap: 10px;
 
 }
 .genre_div a{
@@ -145,6 +146,7 @@ html[data-theme='dark'] .Search input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 25px;
 
 }
 .genre_div a:hover{
@@ -165,7 +167,11 @@ html[data-theme='dark'] .Search input:focus {
     border: var(--text-color) 1px solid;
     background: var(--background-color);
     transition: color 200ms linear;
+    width: 50px;
 }
 .submit button:hover{
     cursor: pointer;
+    color: var(--focus-color);
+    border: var(--focus-color) 1px solid;
+    transition: color 200ms linear;
 }

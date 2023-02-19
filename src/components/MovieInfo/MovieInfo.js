@@ -23,7 +23,7 @@ const MovieInfo = () => {
                             <div className={css.title}>
                                 <h2>{movie.title}</h2>
                             </div>
-                            <div className={css.genre}>
+                                <div className={css.genre}>
                                 Genres: {movie.genres.map(genre => <Link to={`/genre/${genre.id}/${genre.name}`}> {genre.name} </Link>)}
                             </div>
                             <div className={css.production_country}>

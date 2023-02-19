@@ -6,9 +6,8 @@ import {StarsRating} from "../StarsRating/StarsRating";
 
 const MoviesListCard = ({card}) => {
 
-    const {title, poster_path,id, vote_average} = card
+    const {title, poster_path,id, vote_average, release_date} = card
     const {theme, setTheme} = useTheme();
-
 
     return (
         <Link className={css.Card} to={`/movie/${id}`}>
