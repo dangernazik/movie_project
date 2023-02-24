@@ -4,7 +4,7 @@ import {MovieInfo} from "../components";
 const MovieDetailsPage = () => {
     return (
         <div>
-            <MovieInfo/>
+            <MovieInfo />
         </div>
     );
 };

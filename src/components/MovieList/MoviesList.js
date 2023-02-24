@@ -19,14 +19,18 @@ const MoviesList = () => {
 
 
     useEffect(() => {
-        dispatch(movieActions.getMovies())
-    }, [currentPage])
+        dispatch(movieActions.getMovies({currentPage}))
+    }, [currentPage, dispatch])
 
 
     return (
-        <div className={css.Wrap}>
-            <Pagination/>
+        <div className={css.Wrap} >
+
             {movies.map(card => <MoviesListCard key={card.id} card={card}/>)}
+            <div className={'buttons_pagination'}>
+            <button  disabled={currentPage === 1} onClick={() => dispatch(movieActions.setCurrentPage(currentPage - 1 ))}>prev</button>
+            <button  disabled={currentPage === 500} onClick={() => dispatch(movieActions.setCurrentPage(currentPage + 1 ))}>next</button>
+            </div>
         </div>
 
     );

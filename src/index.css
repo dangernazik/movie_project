@@ -28,4 +28,25 @@ html[data-theme='dark']{
   --background-color: #171717;
   --background-icon-color: #EDEDED;
 }
-
+.buttons_pagination{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons_pagination button{
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--text-color);
+  border: var(--text-color) 1px solid;
+  border-radius: 50px;
+  height: 40px;
+  width: 70px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.buttons_pagination button:hover{
+  color: var(--focus-color);
+  border: var(--focus-color) 1px solid;
+}

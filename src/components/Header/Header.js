@@ -1,10 +1,11 @@
 import React, {useEffect, useRef, } from 'react';
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 import css from "./Header.module.css"
 import {UserInfo} from "../UserInfo/UserInfo";
 import {useTheme} from "../../hooks/useTheme";
-;
+
+
 
 
 
@@ -19,10 +20,6 @@ const Header = () => {
 
     const search = useRef()
 
-    const searchMovie = () => {
-
-        console.log(search.current.value);
-    }
 
 
 
@@ -48,7 +45,9 @@ const Header = () => {
                 <div className={css.Search}>
                     <div className={css.submit}>
                     <input type="text" placeholder={"search"} ref={search}/>
-                    <button onClick={searchMovie}>search</button>
+                    {/*<Link to={`/search:${searchname}`}>*/}
+                        <button >search</button>
+                    {/*</Link>*/}
                     </div>
                     <div className={css.button_div}>
                         <button onClick={handleDarkThemeClick}><i className="fa-solid fa-moon"></i></button>

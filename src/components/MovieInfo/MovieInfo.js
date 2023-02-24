@@ -7,10 +7,19 @@ const MovieInfo = () => {
     const {movie_id} = useParams()
 
     const [movie, setMovie] = useState(null);
+    const [images, setImages] = useState(null);
+
 
     useEffect(() => {
         movieService.getById(movie_id).then(({data}) => setMovie(data))
     }, [movie_id])
+
+    useEffect(() => {
+        movieService.getImages(movie_id).then(({data}) => setImages(data.backdrops))
+    }, [])
+
+
+
     return (
         <div>
             {movie && (
@@ -30,12 +39,17 @@ const MovieInfo = () => {
                                 Production country: {movie.production_countries.map(country => <p>{country.name}</p>)}
                             </div>
                             <div className={css.production_company}>
-                                Production company: {movie.production_companies.map(company => <p>{company.name}</p>)}
+                                 Production company: {movie.production_companies.map(company =>  <p>{company.name} </p>)}
                             </div>
                         </div>
                     </div>
                     <div className={css.overview}>
                         <p>{movie.overview}</p>
+                    </div>
+                    {/*<div>*/}
+                    {/*    <img src={'https://image.tmdb.org/t/p/w500' + images.file_path} alt=""/>*/}
+                    {/*</div>*/}
+                    <div>
                     </div>
                 </div>
             )}

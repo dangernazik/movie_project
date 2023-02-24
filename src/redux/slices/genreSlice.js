@@ -3,6 +3,7 @@ import {movieService} from "../../services/movieService";
 
 const initialState = {
     genres: [],
+    currentPage: 1
 };
 
 

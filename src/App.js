@@ -7,7 +7,7 @@ import {
     MovieDetailsPage,
     MovieGenrePage,
     NewMovieListPage,
-    PopularMoviePAge
+    PopularMoviePAge, SearchedMoviePage
 } from "./pages";
 
 
@@ -21,9 +21,9 @@ function App() {
                     <Route index element={<HomePage/>}/>
                     <Route path={'movie/:movie_id'} element={<MovieDetailsPage/>}/>
                     <Route path={'genres'} element={<GenrePage/>}/>
-                    <Route path={'page=:page'} element={<NewMovieListPage/>}/>
                     <Route path={'genre/:genre_id/:genre_name'} element={<MovieGenrePage/>}/>
                     <Route path={'popular'} element={<PopularMoviePAge/>}/>
+                    <Route path={'search/:search'} element={<SearchedMoviePage/>}/>
                     <Route path={'about'} element={<AboutPage/>}/>
                 </Route>
 

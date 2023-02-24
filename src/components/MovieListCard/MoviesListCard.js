@@ -6,7 +6,7 @@ import {StarsRating} from "../StarsRating/StarsRating";
 
 const MoviesListCard = ({card}) => {
 
-    const {title, poster_path,id, vote_average, release_date} = card
+    const {title, poster_path,id, vote_average} = card
     const {theme, setTheme} = useTheme();
 
     return (
