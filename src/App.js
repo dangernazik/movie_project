@@ -23,7 +23,7 @@ function App() {
                     <Route path={'genres'} element={<GenrePage/>}/>
                     <Route path={'genre/:genre_id/:genre_name'} element={<MovieGenrePage/>}/>
                     <Route path={'popular'} element={<PopularMoviePAge/>}/>
-                    <Route path={'search/:search'} element={<SearchedMoviePage/>}/>
+                    <Route path={'search'} element={<SearchedMoviePage/>}/>
                     <Route path={'about'} element={<AboutPage/>}/>
                 </Route>
 

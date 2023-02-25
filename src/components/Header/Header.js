@@ -1,15 +1,17 @@
 import React, {useEffect, useRef, } from 'react';
-import {Link, NavLink} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
 
 import css from "./Header.module.css"
 import {UserInfo} from "../UserInfo/UserInfo";
 import {useTheme} from "../../hooks/useTheme";
+import {movieService} from "../../services/movieService";
 
 
 
 
 
 const Header = () => {
+    const navigate = useNavigate()
     const {theme, setTheme} = useTheme();
     const handleLightThemeClick = () => {
         setTheme('light')
@@ -19,8 +21,6 @@ const Header = () => {
     }
 
     const search = useRef()
-
-
 
 
     return (
@@ -44,10 +44,15 @@ const Header = () => {
                 </div>
                 <div className={css.Search}>
                     <div className={css.submit}>
-                    <input type="text" placeholder={"search"} ref={search}/>
-                    {/*<Link to={`/search:${searchname}`}>*/}
-                        <button >search</button>
-                    {/*</Link>*/}
+                        <form action="">
+                            <input type="text" placeholder={"search"} ref={search} required={true}/>
+                            <button onClick={() => {
+                                console.log(search.current.value);
+                                localStorage.setItem('keywords', search.current.value);
+                                navigate('/search');
+                            }
+                            }>search</button>
+                        </form>
                     </div>
                     <div className={css.button_div}>
                         <button onClick={handleDarkThemeClick}><i className="fa-solid fa-moon"></i></button>

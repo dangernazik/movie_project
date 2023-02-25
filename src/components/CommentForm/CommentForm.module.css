@@ -1,0 +1,85 @@
+.formAdd {
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+    row-gap: 20px;
+    margin-right: 350px;
+    color: var(--text-color);
+}
+
+.name {
+    width: 50%;
+    background: none;
+    height: 40px;
+    border: none;
+    border-bottom: var(--text-color) 1px solid;
+    color: var(--text-color);
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.comment {
+    width: 100%;
+    font-size: 15px;
+    height: 40px;
+    border: none;
+    color: var(--text-color);
+    border-bottom: var(--text-color) 1px solid;
+    border-radius: 5px;
+    background: none;
+}
+
+.formAdd button {
+    width: 25%;
+    border-radius: 5px;
+    height: 30px;
+    background: none;
+    color: var(--text-color);
+    border: var(--text-color) 1px solid;
+}
+
+.formAdd button:hover {
+    cursor: pointer;
+    color: var(--focus-color);
+    border: var(--focus-color) 1px solid;
+
+}
+
+html[data-theme='dark'] .name {
+    background: var(--background-color);
+    border-bottom: var(--text-color) 1px solid;
+}
+
+html[data-theme='dark'] .name:focus {
+    outline: none !important;
+    border-bottom-color: var(--focus-color);
+}
+
+html[data-theme='dark'] .comment {
+    background: var(--background-color);
+    border-bottom: var(--text-color) 1px solid;
+}
+
+html[data-theme='dark'] .comment:focus {
+    outline: none !important;
+    border-bottom-color: var(--focus-color);
+}
+
+.comments {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin: 40px 350px 100px 350px;
+    row-gap: 25px;
+}
+.comments b{
+    font-size: 20px;
+}
+.comments li{
+    list-style-type: none
+}
+.oneComment{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}

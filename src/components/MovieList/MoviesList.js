@@ -7,6 +7,8 @@ import css from "./MovieList.module.css"
 import {useTheme} from "../../hooks/useTheme";
 import {Pagination} from "../pagination/Pagination";
 import {Link} from "react-router-dom";
+import {x} from "joi";
+import {Footer} from "../Footer/Footer";
 
 
 const MoviesList = () => {
@@ -28,7 +30,9 @@ const MoviesList = () => {
 
             {movies.map(card => <MoviesListCard key={card.id} card={card}/>)}
             <div className={'buttons_pagination'}>
-            <button  disabled={currentPage === 1} onClick={() => dispatch(movieActions.setCurrentPage(currentPage - 1 ))}>prev</button>
+            <button  disabled={currentPage === 1} onClick={() =>
+                dispatch(movieActions.setCurrentPage(currentPage - 1 ))
+            }>prev</button>
             <button  disabled={currentPage === 500} onClick={() => dispatch(movieActions.setCurrentPage(currentPage + 1 ))}>next</button>
             </div>
         </div>

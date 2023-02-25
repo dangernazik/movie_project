@@ -1,10 +1,13 @@
 import React from 'react';
 
-const AboutPage = () => {
+const Trailer = () => {
+
+
     return (
         <div>
+
         </div>
     );
 };
 
-export {AboutPage};
+export {Trailer};

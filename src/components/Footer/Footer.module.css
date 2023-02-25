@@ -1,0 +1,51 @@
+.footer {
+    background-color: var(--background-color);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    border-top: var(--text-color) 1px solid;
+}
+
+.footer_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 0;
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 350px;
+}
+.social_medias{
+    margin-right: 50px;
+    color: var(--text-color);
+}
+.numbers{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    color: var(--text-color)
+}
+.icons{
+    display: flex;
+    column-gap: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+.facebook  i:hover{
+    color: dodgerblue;
+}
+.instagram i:hover{
+    color: hotpink;
+}
+.telegram i:hover{
+    color: deepskyblue;
+}
+.twitter i:hover{
+    color: lightskyblue;
+}
+

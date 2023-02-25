@@ -23,6 +23,7 @@ const getMovies = createAsyncThunk(
 
 
 
+
 const movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
