@@ -1,5 +1,6 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings'
+
 import css from '../../components/MovieListCard/MovieListCard.module.css'
 const StarsRating = ({vote_average}) => {
         return (

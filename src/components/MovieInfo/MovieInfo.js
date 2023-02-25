@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useParams} from "react-router-dom";
+
 import {movieService} from "../../services/movieService";
 import css from './MovieInfo.module.css'
 import {CommentForm} from "../CommentForm/CommentForm";
-import {Footer} from "../Footer/Footer";
+
 
 const MovieInfo = () => {
     const {movie_id} = useParams()

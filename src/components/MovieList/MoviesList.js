@@ -1,15 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
 import {MoviesListCard} from "../MovieListCard/MoviesListCard";
 import {movieActions} from "../../redux";
 import css from "./MovieList.module.css"
 import {useTheme} from "../../hooks/useTheme";
-import {Pagination} from "../pagination/Pagination";
-import {Link} from "react-router-dom";
-import {x} from "joi";
-import {Footer} from "../Footer/Footer";
-
 
 const MoviesList = () => {
 

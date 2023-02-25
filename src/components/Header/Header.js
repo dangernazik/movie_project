@@ -1,10 +1,10 @@
-import React, {useEffect, useRef, } from 'react';
-import {Link, NavLink, useNavigate} from "react-router-dom";
+import React, {useRef} from 'react';
+import { NavLink, useNavigate} from "react-router-dom";
 
 import css from "./Header.module.css"
 import {UserInfo} from "../UserInfo/UserInfo";
 import {useTheme} from "../../hooks/useTheme";
-import {movieService} from "../../services/movieService";
+
 
 
 
@@ -47,7 +47,6 @@ const Header = () => {
                         <form action="">
                             <input type="text" placeholder={"search"} ref={search} required={true}/>
                             <button onClick={() => {
-                                console.log(search.current.value);
                                 localStorage.setItem('keywords', search.current.value);
                                 navigate('/search');
                             }

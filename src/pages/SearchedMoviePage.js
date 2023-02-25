@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+
 import {movieService} from "../services/movieService";
-import {useParams} from "react-router-dom";
 import {MoviesListCard} from "../components";
 import css from ".././components/MovieList/MovieList.module.css"
 import {movieActions} from "../redux";
-import {useDispatch, useSelector} from "react-redux";
-import {Footer} from "../components/Footer/Footer";
+
 
 const SearchedMoviePage = () => {
     const dispatch = useDispatch()

@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {genreActions, movieActions} from "../../redux";
+
+import {genreActions} from "../../redux";
 import {Genre} from "../Genre/Genre";
 import css from '../Header/Header.module.css'
 

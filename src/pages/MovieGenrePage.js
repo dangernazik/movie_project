@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
+
 import {movieService} from "../services/movieService";
 import {MoviesListCard} from "../components";
 import css from ".././components/MovieList/MovieList.module.css"
 import {useTheme} from "../hooks/useTheme";
 import {useDispatch, useSelector} from "react-redux";
 import {movieActions} from "../redux";
-import {Footer} from "../components/Footer/Footer";
+
 
 const MovieGenrePage = () => {
     const {genre_id, genre_name} = useParams()
