@@ -40,7 +40,7 @@ const MovieInfo = () => {
                             </div>
                             <div className={css.genre}>
                                 Genres: {movie.genres.map(genre => <Link
-                                to={`/genre/${genre.id}/${genre.name}`}> {genre.name} </Link>)}
+                                to={`/genre/${genre.id}/${genre.name}`} key={genre.id}> {genre.name} </Link>)}
                             </div>
                             <div className={css.production_country}>
                                 Production country: {movie.production_countries.map(country => <p>{country.name}</p>)}
@@ -62,7 +62,7 @@ const MovieInfo = () => {
                             <img src={'https://image.tmdb.org/t/p/w500' + images[2].file_path} alt="filmPhotos"/>}
                     </div>
                     <div className={css.trailer}>
-                        <iframe src= {`https://www.youtube.com/embed/${key}`} frameborder="0"></iframe>
+                        <iframe src= {`https://www.youtube.com/embed/${key}`} key={movie_id}></iframe>
                     </div>
                     <div>
                         <CommentForm/>

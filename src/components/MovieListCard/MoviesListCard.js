@@ -11,7 +11,7 @@ const MoviesListCard = ({card}) => {
     const {theme, setTheme} = useTheme();
 
     return (
-        <Link className={css.Card} to={`/movie/${id}`}>
+        <Link className={css.Card} to={`/movie/${id}`} key={id}>
             <div className={css.image}>
                 <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt={title}/>
             </div>

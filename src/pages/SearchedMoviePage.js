@@ -30,7 +30,7 @@ const SearchedMoviePage = () => {
             <button  disabled={currentPage === 1} onClick={() =>
                 dispatch(movieActions.setCurrentPage(currentPage - 1 ))
             }>prev</button>
-            <button  disabled={currentPage === 500} onClick={() => dispatch(movieActions.setCurrentPage(currentPage + 1 ))}>next</button>
+            <button  disabled={currentPage === 5} onClick={() => dispatch(movieActions.setCurrentPage(currentPage + 1 ))}>next</button>
         </div>
     </div>
     );

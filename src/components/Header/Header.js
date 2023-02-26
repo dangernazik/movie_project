@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import { NavLink, useNavigate} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
 
 import css from "./Header.module.css"
 import {UserInfo} from "../UserInfo/UserInfo";
@@ -30,7 +30,7 @@ const Header = () => {
                     <div>
                         <i className="fa-solid fa-bars"></i>
                     </div>
-                    <a href='/' style={{color: 'deepskyblue'}}>filmX</a>
+                    <Link to={'/'}>filmX</Link>
 
                 </div>
                 <div className={css.Categories}>
