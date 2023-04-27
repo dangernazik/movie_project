@@ -5,7 +5,11 @@ import {Header} from "../components";
 import {Footer} from "../components/Footer/Footer";
 
 
+
+
 const MainLayout = () => {
+
+
     return (
         <div>
             <Header/>

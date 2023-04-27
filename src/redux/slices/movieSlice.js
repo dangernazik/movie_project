@@ -14,6 +14,7 @@ const getMovies = createAsyncThunk(
     async ({currentPage}, {rejectWithValue}) => {
         try {
             const {data} = await movieService.getAll(currentPage);
+            console.log(data.results);
             return data.results
         } catch (e) {
             return rejectWithValue(e.response.data)

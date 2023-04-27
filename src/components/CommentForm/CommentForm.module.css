@@ -45,22 +45,22 @@
 
 }
 
-html[data-theme='dark'] .name {
+ .name {
     background: var(--background-color);
     border-bottom: var(--text-color) 1px solid;
 }
 
-html[data-theme='dark'] .name:focus {
+ .name:focus {
     outline: none !important;
     border-bottom-color: var(--focus-color);
 }
 
-html[data-theme='dark'] .comment {
+ .comment {
     background: var(--background-color);
     border-bottom: var(--text-color) 1px solid;
 }
 
-html[data-theme='dark'] .comment:focus {
+ .comment:focus {
     outline: none !important;
     border-bottom-color: var(--focus-color);
 }

@@ -4,10 +4,7 @@ import {Link, NavLink, useNavigate} from "react-router-dom";
 import css from "./Header.module.css"
 import {UserInfo} from "../UserInfo/UserInfo";
 import {useTheme} from "../../hooks/useTheme";
-
-
-
-
+import {HomePage} from "../../pages";
 
 
 const Header = () => {
@@ -22,6 +19,12 @@ const Header = () => {
 
     const search = useRef()
 
+    const logout = () => {
+        localStorage.clear()
+        navigate ("/")
+    }
+
+    const keywords = localStorage.getItem('name')
 
     return (
         <div className={css.header_wrap}>
@@ -38,7 +41,7 @@ const Header = () => {
                     <NavLink to={"popular"}>popular movies</NavLink>
                     <div>
 
-                    <NavLink to={"genres"} >genres</NavLink>
+                        <NavLink to={"genres"}>genres</NavLink>
                     </div>
                     <NavLink to={"about"}>about</NavLink>
                 </div>
@@ -50,7 +53,8 @@ const Header = () => {
                                 localStorage.setItem('keywords', search.current.value);
                                 navigate('/search');
                             }
-                            }>search</button>
+                            }>search
+                            </button>
                         </form>
                     </div>
                     <div className={css.button_div}>
@@ -61,8 +65,16 @@ const Header = () => {
                 <div className={css.user_login}>
                     <UserInfo/>
                     <div className={css.login}>
-                        <p>dangernazik</p>
-                        <p style={{color: 'deepskyblue'}}>log out</p>
+                        {
+                            localStorage.length > 0 ?
+                                <div className={css.username}>
+                                    <p>{keywords}</p>
+                                    <button onClick={logout}> log out </button>
+                                </div> :
+                                <Link to={"login"}>
+                                    <button style={{marginLeft: '10px'}}>login </button>
+                                </Link>
+                        }
                     </div>
                 </div>
 

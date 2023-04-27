@@ -6,6 +6,7 @@ import css from './MovieInfo.module.css'
 import {CommentForm} from "../CommentForm/CommentForm";
 
 
+
 const MovieInfo = () => {
     const {movie_id} = useParams()
 

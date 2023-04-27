@@ -15,17 +15,21 @@ const Footer = () => {
                 <div className={css.social_medias}>Social medias:
                     <div className={css.icons}>
                         <div className={css.facebook}>
-                            <i className="fa-brands fa-facebook"></i>
+                            <a href="https://www.facebook.com/"><i className="fa-brands fa-facebook"></i> </a>
+
                         </div>
                         <div className={css.instagram}>
-                            <i className="fa-brands fa-instagram"></i>
+                            <a href="https://www.instagram.com/"><i className="fa-brands fa-instagram"></i></a>
+
                         </div>
                         <div className={css.telegram}>
-                            <i className="fa-brands fa-telegram"></i>
+                            <a href="https://web.telegram.org/k/"><i className="fa-brands fa-telegram"></i></a>
+
 
                         </div>
                         <div className={css.twitter}>
-                            <i className="fa-brands fa-twitter"></i>
+                            <a href="https://twitter.com/home"><i className="fa-brands fa-twitter"></i></a>
+
 
                         </div>
                     </div>

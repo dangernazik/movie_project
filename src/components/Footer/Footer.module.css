@@ -36,6 +36,9 @@
     font-size: 18px;
     color: var(--text-color);
 }
+a:visited{
+    color: var(--text-color);
+}
 .facebook  i:hover{
     color: dodgerblue;
 }

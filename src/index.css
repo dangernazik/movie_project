@@ -50,4 +50,26 @@ html[data-theme='dark']{
   color: var(--focus-color);
   border: var(--focus-color) 1px solid;
 }
+.button-cool{
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 0;
+  border: var(--text-color) 1px solid;
+  background: var(--background-color);
+  transition: color 100ms linear;
+  width: 500px;
+  height: 51px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+.button-cool:hover{
+  cursor: pointer;
+  color: var(--text-color);
+  border: var(--focus-color) 1px solid;
+  transition: color 100ms linear;
+}
+
 

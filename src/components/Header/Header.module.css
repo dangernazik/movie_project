@@ -78,6 +78,7 @@ body{
 .user img{
     height: 40px;
     width: 40px;
+    border-radius: 50%;
 }
 .login{
     display: flex;
@@ -91,10 +92,36 @@ body{
     color: var(--text-color);
     transition: color 200ms linear;
 }
+.login button{
+    color: var(--text-color);
+    border-radius: 5px;
+    padding: 0;
+    border: var(--text-color) 1px solid;
+    background: var(--background-color);
+    transition: color 200ms linear;
+    width: 50px;
+    height: 31px;
+}
+.login button:hover{
+    cursor: pointer;
+    color: var(--focus-color);
+    border: var(--focus-color) 1px solid;
+    transition: color 200ms linear;
+}
+
 .user_login{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.username{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.username p{
+    margin-right: 15px;
 }
 .button_div button{
     height: 20px;
