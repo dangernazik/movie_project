@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 
 import css from './CommentForm.module.css'
 import {useParams} from "react-router-dom";
+
+
 const CommentForm = () => {
     const [name, setName] = useState("");
     const {movie_id} = useParams()
@@ -43,6 +45,7 @@ const CommentForm = () => {
         setComment("");
     };
 
+
     const renderComments = () => {
         return comments.map((comment) => (
             <div key={comment.id} className={css.oneComment}>
@@ -52,6 +55,7 @@ const CommentForm = () => {
         ));
     };
     const isSubmitDisabled = !comment || !name;
+
 
     return (
         <div>

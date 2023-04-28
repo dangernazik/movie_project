@@ -4,6 +4,7 @@ import {Link, useParams} from "react-router-dom";
 import {movieService} from "../../services/movieService";
 import css from './MovieInfo.module.css'
 import {CommentForm} from "../CommentForm/CommentForm";
+import {Comment} from "../Comment/Comment";
 
 
 
@@ -66,7 +67,7 @@ const MovieInfo = () => {
                         <iframe src= {`https://www.youtube.com/embed/${key}`} key={movie_id}></iframe>
                     </div>
                     <div>
-                        <CommentForm/>
+                        <Comment filmId={movie_id} filmName={movie.title}/>
                     </div>
 
                 </div>

@@ -27,7 +27,7 @@ const Header = () => {
     const keywords = localStorage.getItem('name')
 
     return (
-        <div className={css.header_wrap}>
+        <div className={css.header_wrap} >
             <div className={css.Header}>
                 <div className={css.Bar_logo}>
                     <div>

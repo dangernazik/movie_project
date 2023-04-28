@@ -10,6 +10,7 @@ import {setupStore} from "./redux";
 
 import {initializeApp} from "firebase/app";
 import 'firebase/firestore'
+import { getFirestore } from "@firebase/firestore";
 import {getAuth, GoogleAuthProvider} from'firebase/auth'
 
 
@@ -23,7 +24,8 @@ const firebaseConfig = {
     measurementId: "G-1F3RVLFDZD"
 };
 
-const app = initializeApp(firebaseConfig);
+ const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
 const auth = getAuth(app)
 const provider = new GoogleAuthProvider();
 
