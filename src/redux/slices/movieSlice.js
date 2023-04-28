@@ -21,7 +21,18 @@ const getMovies = createAsyncThunk(
         }
     }
 );
-
+const getPopularMovies = createAsyncThunk(
+    'movieSlice/getAll',
+    async ({currentPage}, {rejectWithValue}) => {
+        try {
+            const {data} = await movieService.getTopRated(currentPage);
+            console.log(data.results);
+            return data.results
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+        }
+    }
+);
 
 
 
@@ -51,6 +62,7 @@ const {reducer: movieReducer, actions: {setCurrentPage}} = movieSlice;
 
 const movieActions = {
     getMovies,
+    getPopularMovies,
     setCurrentPage
 }
 

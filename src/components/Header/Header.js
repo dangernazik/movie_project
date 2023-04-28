@@ -38,7 +38,7 @@ const Header = () => {
                 </div>
                 <div className={css.Categories}>
                     <NavLink to={""}>home</NavLink>
-                    <NavLink to={"popular"}>popular movies</NavLink>
+                    <NavLink to={"popular"}>top rated</NavLink>
                     <div>
 
                         <NavLink to={"genres"}>genres</NavLink>

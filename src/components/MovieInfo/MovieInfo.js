@@ -50,6 +50,9 @@ const MovieInfo = () => {
                             <div className={css.production_company}>
                                 Production company: {movie.production_companies.map(company => <p>{company.name} </p>)}
                             </div>
+                            <div  className={css.production_company}>
+                                Runtime: <b>{movie.runtime} min</b>
+                            </div>
                         </div>
                     </div>
                     <div className={css.overview}>
